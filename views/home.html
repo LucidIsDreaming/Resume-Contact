@@ -10,5 +10,88 @@
 </head>
 <body>
     
+    <div id="main">
+
+        <div id="header">
+            <h1>Contact Form</h1>
+        </div>
+
+        <fieldset>
+
+            <label for="fname">First Name</label>>
+            <span class="err" id="err-fname">First name is required</span>
+            <input type="text" id="fname" name="fname">
+
+            <label for="lname">Last Name</label>>
+            <span class="err" id="err-lname">Last name is required</span>
+            <input type="text" id="lname" name="lname">
+
+            <label for="title">Job Title</label>>
+            <span class="err" id="err-title">First name is required</span>
+            <input type="text" id="title" name="title">
+            
+            <label for="company">Company</label>>
+            <span class="err" id="err-company">First name is required</span>
+            <input type="text" id="company" name="company">
+            
+            <label for="linked">Linkedin URL</label>>
+            <span class="err" id="err-linked">First name is required</span>
+            <input type="text" id="linked" name="linked">
+
+            <label for="email">Email Address</label>>
+            <span class="err" id="err-email">First name is required</span>
+            <input type="text" id="email" name="email">
+
+            <label for="meet-how">How Did We Meet?</label>
+            <span class="err" id="meet-how">Please select</span>
+
+            <select id="meet" name="meet">
+                    <option value = "none">-- Please Select --</option>
+
+                    <option value = "inperson"> In-Person </option>
+
+                    <option value = "mobile"> Mobile </option>
+
+                    <option value = "zoom"> On Zoom </option>
+            </select>
+            
+
+
+
+            <label for = "comment"> Message </label>
+            <textarea rows = "5" id="comment" name="comment"></textarea>
+
+
+            <label for = "mail-list">
+                <input type="checkbox" id="mail-list" name = "mail-list[]" value ="mail-list">Please add me to your mailing list
+            </label>
+
+
+
+            <span class="err" id="err-method">Select an option</span>
+            <label for="mail-list">Choose an email format</label>
+
+            <label for ="html">
+            <input type = "radio" id = "html" name = "method" value = "html">HTML
+            </label>
+
+            <label for ="message">
+            <input type = "radio" id = "message" name = "method" value = "message">text
+            </label>
+
+
+
+            <button type="submit" id="order-button">Submit</button>
+            
+            <!-- <label for="other">Other (please specify)</label>>
+            <span class="err" id="err-other">First name is required</span>
+            <input type="text" id="other" name="other"> -->
+            
+        </fieldset>
+
+    </div>
+
+
+
 </body>
 </html>
