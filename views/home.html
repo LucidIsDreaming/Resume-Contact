@@ -7,6 +7,8 @@
 
     <link rel="icon" href="/images/cutechicken.png">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="js/contact.js"defer></script>
 </head>
 <body>
     
@@ -16,78 +18,115 @@
             <h1>Contact Form</h1>
         </div>
 
-        <fieldset>
+        <form id = "contact-form" action = "#" method = "get">
+            <fieldset>
 
-            <label for="fname">First Name</label>>
-            <span class="err" id="err-fname">First name is required</span>
-            <input type="text" id="fname" name="fname">
+                <div class = "three-column">
 
-            <label for="lname">Last Name</label>>
-            <span class="err" id="err-lname">Last name is required</span>
-            <input type="text" id="lname" name="lname">
+                    <div class = "form-group">
+                        <label for="fname">First Name</label>
+                        <span class="err" id="err-fname">First name is required</span>
+                        <input type="text" id="fname" name="fname">
+                    </div>
 
-            <label for="title">Job Title</label>>
-            <span class="err" id="err-title">First name is required</span>
-            <input type="text" id="title" name="title">
-            
-            <label for="company">Company</label>>
-            <span class="err" id="err-company">First name is required</span>
-            <input type="text" id="company" name="company">
-            
-            <label for="linked">Linkedin URL</label>>
-            <span class="err" id="err-linked">First name is required</span>
-            <input type="text" id="linked" name="linked">
-
-            <label for="email">Email Address</label>>
-            <span class="err" id="err-email">First name is required</span>
-            <input type="text" id="email" name="email">
-
-            <label for="meet-how">How Did We Meet?</label>
-            <span class="err" id="meet-how">Please select</span>
-
-            <select id="meet" name="meet">
-                    <option value = "none">-- Please Select --</option>
-
-                    <option value = "inperson"> In-Person </option>
-
-                    <option value = "mobile"> Mobile </option>
-
-                    <option value = "zoom"> On Zoom </option>
-            </select>
-            
+                    <div class = "form-group">
+                        <label for="lname">Last Name</label>
+                        <span class="err" id="err-lname">Last name is required</span>
+                        <input type="text" id="lname" name="lname">
+                    </div>
 
 
-
-            <label for = "comment"> Message </label>
-            <textarea rows = "5" id="comment" name="comment"></textarea>
-
-
-            <label for = "mail-list">
-                <input type="checkbox" id="mail-list" name = "mail-list[]" value ="mail-list">Please add me to your mailing list
-            </label>
+                    <div class = "form-group">
+                        <label for="title">Job Title</label>
+                        <span class="err" id="err-title">Job Title is required</span>
+                        <input type="text" id="title" name="title">
+                    </div>
 
 
+                    <div class = "form-group">
+                        <label for="company">Company</label>
+                        <span class="err" id="err-company">Company is required</span>
+                        <input type="text" id="company" name="company">
+                    </div>
 
-            <span class="err" id="err-method">Select an option</span>
-            <label for="mail-list">Choose an email format</label>
+                    <div class = "form-group">
+                        <label for="linked">Linkedin URL</label>
+                        <span class="err" id="err-linked">Linkedin URL is required</span>
+                        <input type="url" id="linked" name="linked">
+                    </div>
 
-            <label for ="html">
-            <input type = "radio" id = "html" name = "method" value = "html">HTML
-            </label>
-
-            <label for ="message">
-            <input type = "radio" id = "message" name = "method" value = "message">text
-            </label>
+                    <div class = "form-group">
+                        <label for="email">Email Address</label>
+                        <span class="err" id="err-email">Email is required</span>
+                        <input type="email" id="email" name="email">
+                    </div>
 
 
+                </div>
 
-            <button type="submit" id="order-button">Submit</button>
-            
-            <!-- <label for="other">Other (please specify)</label>>
-            <span class="err" id="err-other">First name is required</span>
-            <input type="text" id="other" name="other"> -->
-            
-        </fieldset>
+                <div class = "two-column">
+
+                    <div class = "form-group">
+                        <label for="meet">How Did We Meet?</label>
+                        <span class="err" id="err-meet">Please select</span>
+
+                        <select id="meet" name="meet">
+                                <option value = "none">-- Please Select --</option>
+
+                                <option value = "inperson"> In-Person </option>
+
+                                <option value = "mobile"> Mobile </option>
+
+                                <option value = "zoom"> On Zoom </option>
+                        </select>
+                    </div>
+
+
+                    <div class = "form-group">
+                        <label for="other"> Other (please specify) </label>
+                        <textarea rows = "1" id = "other" name = "other"></textarea>
+                    </div>
+
+                
+                </div>
+
+                    <div class = "form-group">
+                        <label for = "comment"> Message </label>
+                        <textarea rows = "5" id="comment" name="comment"></textarea>
+                    </div>  
+                
+                <div class = "form-options">
+
+                    <div class = "form-group">
+                        <label for = "mail-list">
+                            <input type="checkbox" id="mail-list" name = "mail-list[]" value ="mail-list">Please add me to your mailing list
+                        </label>
+                    </div>
+
+
+                    <div class = "form-group">
+                        <fieldset class="email-format">
+                            <legend>Choose an email format</legend>
+
+                            <label for ="html">
+                            <input type = "radio" id = "html" name = "method" value = "html">HTML
+                            </label>
+
+                            <label for ="text">
+                            <input type = "radio" id = "text" name = "method" value = "text">text
+                            </label>
+                        </fieldset>
+                    </div>
+
+                </div>
+
+                    <div class = "form-group">
+                        <button type="submit" id="order-button">Submit</button>
+                    </div>
+                
+                
+            </fieldset>
+        </form>
 
     </div>
 
