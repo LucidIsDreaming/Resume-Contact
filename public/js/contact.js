@@ -37,7 +37,14 @@ document.getElementById("contact-form").onsubmit = () => {
         }
 
     let email = document.getElementById("email").value.trim();
-        if (email === "") {
+    //add new let to check if the mailing list is selected
+    let mailList = document.getElementById("mail-list").checked; //.checked to see if box is checked
+        if (mailList && email === "") {
+            document.getElementById("err-email").textContent = "Email is required for mailing list";
+            document.getElementById("err-email").style.display = "block";
+            isValid = false;
+        } else if (email !== "" && (!email.includes("@") || !email.includes("."))){
+            document.getElementById("err-email").textContent = "Enter a valid email address";
             document.getElementById("err-email").style.display = "block";
             isValid = false;
         }
