@@ -18,17 +18,17 @@ document.getElementById("contact-form").onsubmit = () => {
             isValid = false;
         }
 
-    let title = document.getElementById("title").value.trim();
-        if (title === "") {
-            document.getElementById("err-title").style.display = "block";
-            isValid = false;
-        }
+    // let title = document.getElementById("title").value.trim();
+    //     if (title === "") {
+    //         document.getElementById("err-title").style.display = "block";
+    //         isValid = false;
+    //     }
 
-    let company = document.getElementById("company").value.trim();
-        if (company === "") {
-            document.getElementById("err-company").style.display = "block";
-            isValid = false;
-        }
+    // let company = document.getElementById("company").value.trim();
+    //     if (company === "") {
+    //         document.getElementById("err-company").style.display = "block";
+    //         isValid = false;
+    //     }
 
     let linked = document.getElementById("linked").value.trim();
         if (linked === "") {
@@ -42,43 +42,43 @@ document.getElementById("contact-form").onsubmit = () => {
             isValid = false;
         }
 
-    let other = document.getElementById("other").value.trim();
+    // let other = document.getElementById("other").value.trim();
     //select method validation
     let meet = document.getElementById("meet").value;
 
-        if (meet === "other-option" && other === "") {
-            document.getElementById("err-other").style.display = "block";
-            isValid = false;
-        }  
+        // if (meet === "other-option" && other === "") {
+        //     document.getElementById("err-other").style.display = "block";
+        //     isValid = false;
+        // }  
 
-        if(meet === "none") {
-            document.getElementById("err-meet").style.display = "block";
-            isValid = false;
-        }
+         if(meet === "none") {
+             document.getElementById("err-meet").style.display = "block";
+             isValid = false;
+         }
     
   
 
     //message validation
 
-    let comment = document.getElementById("comment").value.trim();
-        if(comment === "") {
-            document.getElementById("err-comment").style.display = "block";
-            isValid = false;
-        }
+    // let comment = document.getElementById("comment").value.trim();
+    //     if(comment === "") {
+    //         document.getElementById("err-comment").style.display = "block";
+    //         isValid = false;
+    //     }
 
-    let methodSelected = false;
-    let methodButtons = document.getElementsByName("method");
+    // let methodSelected = false;
+    // let methodButtons = document.getElementsByName("method");
 
-    for (let i=0; i<methodButtons.length; i++) {
-        if(methodButtons[i].checked) {
-            methodSelected = true;
-        }
-    }
+    // for (let i=0; i<methodButtons.length; i++) {
+    //     if(methodButtons[i].checked) {
+    //         methodSelected = true;
+    //     }
+    // }
 
-    if(methodSelected === false) {
-        document.getElementById("err-method").style.display = "block";
-        isValid = false;
-    }
+    // if(methodSelected === false) {
+    //     document.getElementById("err-method").style.display = "block";
+    //     isValid = false;
+    // }
 
 
     return isValid;
