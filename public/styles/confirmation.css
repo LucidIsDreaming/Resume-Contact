@@ -24,10 +24,11 @@ p {
 }
 
 .main-button {
-    align-self: flex-start;
+    display: inline-block;
     background-color: green;
     color: white;
     padding: .5rem 1rem;
+    margin-top: 20px;
     border: none;
     border-radius: .25rem;
 }
