@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+</head>
+<body>
+
+    <h1>Thank you for your order, <%= contact.fname %>!</h1>
+    
+    <h2> Order Summary </h2>
+    <p>Date and Time: <%= contact.timestamp.toLocaleString() %></p>
+    <p>Name: <%= contact.fname %> <%= contact.lname %></p>
+    <p>Job Title: <%= contact.title %> </p>
+    <p>Company: <%= contact.company %></p>
+    <p>LinkedIn: <%= contact.linked %> </p>
+    <p>Email: <%= contact.email %></p>
+    <p>How did we meet: <%= contact.meet %> </p>
+    <p>Other ways we met: <%= contact.other %> </p>
+    <p>Comments: <%= contact.comment %> </p>
+    <p>Mail list: <%= contact.mailList %> </p>
+    <p>Email format: <%= contact.method %> </p>
+
+        
+
+        <a href="/" class = "main-button">Back to Form</a>
+
+</body>
+</html>

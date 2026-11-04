@@ -1,0 +1,56 @@
+<!DOCTYthE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewthort" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+    <!-- Add data table resources -->
+    <scritht src = "https://code.jquery.com/jquery-3.7.1.js"></scritht> <!--JQuery HAS TO COME FIRST!!!-->
+    <scritht src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></scritht>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
+</head>
+<body>
+    <h1>Contact Submissions</h1>
+
+    <table id = "contact-table" class = "display">
+        <thead>
+            <tr>
+                <th>Date and Time:</th>
+                <th>Name:</th>
+                <th>Job Title:</th>
+                <th>Company:</th>
+                <th>LinkedIn:</th>
+                <th>Email:</th>
+                <th>How did we meet:</th>
+                <th>Other ways we met:</th>
+                <th>Comments:</th>
+                <th>Mail list:</th>
+                <th>Email format:</th>
+            </tr>
+        </thead>
+        <tbody>
+    <% contacts.forEach(contact => { %>
+        <tr>
+            <td><%= contact.timestamp.toLocaleString() %></td>
+            <td><%= contact.fname %> <%= contact.lname %></td>
+            <td><%= contact.title %> </td>
+            <td><%= contact.company %></td>
+            <td><%= contact.linked %> </td>
+            <td><%= contact.email %></td>
+            <td><%= contact.meet %> </td>
+            <td><%= contact.other %> </td>
+            <td><%= contact.comment %> </td>
+            <td><%= contact.mailList %> </td>
+            <td><%= contact.method %> </td>
+        </tr>
+    <% }); %>
+        </tbody>
+    </table>
+
+    <script>
+        new DataTable('#contact-table');
+    </script>
+</body>
+</html>
