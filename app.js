@@ -17,9 +17,17 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     
 
-    res.render(`home`);
+    res.render(`resume`);
 
 });
+
+app.get('/contact', (req, res) => {
+    
+
+    res.render(`contact`);
+
+});
+
 
 app.post('/contact', (req, res) => {
     

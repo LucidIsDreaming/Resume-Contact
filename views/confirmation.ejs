@@ -9,6 +9,12 @@
 
 </head>
 <body>
+    
+    <div id ="partials">
+    <!-- Include partials -->
+    <%- include('partials/header') %>
+    </div>
+
     <div id = "confirmation">
 
     <h1>Thank you for your submission,  <%= contact.fname %>!</h1>
@@ -28,7 +34,8 @@
 
         
 
-        <a href="/" class = "main-button">Back to Form</a>
+        <a href="/" class = "main-button">Back to Resume Page</a>
+        <a href="/contact" class = "main-button">Back to Contact Form</a>
     </div>
 </body>
 </html>

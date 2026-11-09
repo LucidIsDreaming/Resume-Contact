@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <link rel="icon" href="/images/cutechicken.png">
+    <link rel="stylesheet" href="styles/contact-styles.css">
+
+     <script src="js/contact.js" defer></script>
+</head>
+<body>
+    <div id ="partials">
+    <!-- Include partials -->
+    <%- include('partials/header') %>
+    </div>
+    
+    <div id="main">
+
+        <div id="header">
+            <h1>Contact Form</h1>
+        </div>
+
+        <form id = "contact-form" action = "/contact" method = "post" novalidate>
+            <fieldset>
+
+                <div class = "three-column">
+
+                    <div class = "form-group">
+                        <label for="fname">First Name</label>
+                        <span class="err" id="err-fname">First name is required</span>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+
+                    <div class = "form-group">
+                        <label for="lname">Last Name</label>
+                        <span class="err" id="err-lname">Last name is required</span>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+
+
+                    <div class = "form-group">
+                        <label for="title">Job Title</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+
+
+                    <div class = "form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class = "form-group">
+                        <label for="linked">Linkedin URL</label>
+                        <span class="err" id="err-linked">Linkedin URL must start with https://linkedin.com/in/</span>
+                        <input type="url" id="linked" name="linked">
+                    </div>
+
+                    <div class = "form-group">
+                        <label for="email">Email Address</label>
+                        <span class="err" id="err-email">Enter a valid email address</span>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+
+                </div>
+
+                <div class = "two-column">
+
+                    <div class = "form-group">
+                        <label for="meet">How Did We Meet?</label>
+                        <span class="err" id="err-meet">Please select</span>
+
+                        <select id="meet" name="meet">
+                                <option value = "none">-- Please Select --</option>
+
+                                <option value = "inperson"> In-Person </option>
+
+                                <option value = "online"> Online </option>
+
+                                <option value = "other-option"> Other </option>
+                        </select>
+                    </div>
+
+
+                    <div class = "form-group">
+                        <label for="other"> Other (please specify) </label>
+                        <textarea rows = "1" id = "other" name = "other"></textarea>
+                    </div>
+
+                
+                </div>
+
+                    <div class = "form-group">
+                        <label for = "comment"> Message </label>
+                        <textarea rows = "5" id="comment" name="comment"></textarea>
+                    </div>  
+                
+                <div class = "form-options">
+
+                    <div class = "form-group">
+                        <label for = "mail-list">
+                            <input type="checkbox" id="mail-list" name = "mailList" value ="mail-list">Please add me to your mailing list
+                        </label>
+                    </div>
+
+
+                    <div class = "form-group">
+                        <fieldset class="email-format">
+                            <legend>Choose an email format: </legend>
+
+                            <label for ="html">
+                            <input type = "radio" id = "html" name = "method" value = "html">HTML
+                            </label>
+
+                            <label for ="text">
+                            <input type = "radio" id = "text" name = "method" value = "text">text
+                            </label>
+                        </fieldset>
+                    </div>
+
+                </div>
+
+                    <div class = "form-group">
+                        <button type="submit" id="submit-button">Submit</button>
+                    </div>
+                
+                
+            </fieldset>
+        </form>
+
+    </div>
+
+                        <div class = "github">
+                        <p>https://github.com/LucidIsDreaming/Resume-Contact</p>
+                    </div>
+
+
+
+</body>
+</html>
