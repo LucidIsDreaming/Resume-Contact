@@ -10,6 +10,7 @@
     <script src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
 
     <link rel="stylesheet" href="styles/nav-styles.css">
+    <link rel="stylesheet" href="styles/admin.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
@@ -21,7 +22,11 @@
     </div>
     <h1>Contact Submissions</h1>
 
-    
+    <div id="contact-check">
+    <% if(contacts.length === 0){ %>
+        <h2>No contacts have been submitted yet</h2>
+    <% } %>
+    </div>
 
     <table id = "contact-table" class = "display">
         <thead>
