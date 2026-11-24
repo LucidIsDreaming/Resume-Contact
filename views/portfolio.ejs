@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+        <link rel="stylesheet" href="styles/admin.css">
+        <link rel="stylesheet" href="styles/nav-styles.css">
+</head>
+<body>
+    <div id ="partials">
+    <!-- Include partials -->
+    <%- include('partials/header') %>
+    </div>
+
+    <div id = "portfolio">
+        <form action="/portfolio" method="get">
+
+        <h1>My Portfolio</h1>
+
+        <p>using code i made this</p>
+        <p>i worked on this solo</p>
+
+        <img src="images/iceCream.png" alt = "A picture of my ice-cream website page">
+
+        </form>
+    </div>
+    
+</body>
+</html>
