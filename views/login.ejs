@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="/styles/pizza-styles.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/styles/nav-styles.css">
 </head>
 <body>
+    <div id ="partials">
+    <!-- Include partials -->
+    <%- include('partials/header') %>
+    </div>
     <div id="main">
         <h1>Admin Login</h1>
  
@@ -17,7 +22,7 @@
  
         <form action="/login" method="post">
             <label for="username">Username</label>
-            <input type="username" id="username" name="username" required>
+            <input type="text" id="username" name="username" required>
  
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>

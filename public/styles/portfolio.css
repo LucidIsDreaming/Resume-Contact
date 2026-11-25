@@ -1,0 +1,19 @@
+.project{
+    border: 2px solid rgb(218, 173, 9);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 450px;
+    height: 250px;
+
+    object-fit: cover;
+    max-width: 100%;
+
+    border-radius: 1rem;
+    border: 3px solid var(--primary-border);
+    box-shadow: 0 4px 10px black;
+}
+
