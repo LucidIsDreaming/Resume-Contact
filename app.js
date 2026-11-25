@@ -87,7 +87,7 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
     
 
-    res.render(`contact`);
+    res.render(`contact`, { errors: [] });
 
 });
 
@@ -103,14 +103,14 @@ app.post('/contact', async(req, res) => {
 
         contact.mailList = contact.mailList || "";
 
-        console.log('New order received:', contact);
+        console.log('New submission received:', contact);
 
         //Validate the data on the *server*
-        const valid = validateForm(order);
+        const valid = validateForm(contact);
         if(!valid.isValid){ //if its not valid data
             console.log(valid); //login
-            res.render('resume', { errors: valid.errors }); //list of errors that validation found
-            return; //return stops the submit order method so the code below wont run
+            res.render('contact', { errors: valid.errors }); //list of errors that validation found
+            return; //return stops the submit contact method so the code below wont run
         }
 
 
@@ -133,7 +133,7 @@ app.post('/contact', async(req, res) => {
 
         const [result] = await pool.execute(sql, params);
 
-        console.log('Order inserted with ID:', result.insertId);
+        console.log('Submission inserted with ID:', result.insertId);
 
         res.render('confirmation', { contact: contact });
 
@@ -203,11 +203,11 @@ app.get('/logout', (req, res) => {
 app.get('/admin', requireLogin, async(req, res) => {
 
     try {
-        // Fetch all orders from the database, newest first
+        // Fetch all submissions from the database, newest first
         const contacts = await pool.query('SELECT * FROM contacts ORDER BY timestamp DESC');
 	  console.log(contacts[0]);
 
-        // Render the admin page with the orders
+        // Render the admin page with the submissions
         res.render('admin', { contacts: contacts[0] });
 
 

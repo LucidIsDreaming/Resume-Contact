@@ -5,17 +5,29 @@ export function validateForm(data) {
     //store error messages in an array
     const errors = [];
 
-    // //validate method (Pickup or Delivery)
-    // const validMethods = ['pickup', 'delivery'];
-    // if(!validMethods.includes(data.method)) {
-    //     errors.push("Method must be pickup or delivery");
-    // }
+    if(!data.fname || data.fname.trim() === "") {
+        errors.push("First name is required");
+    }
 
-    // //validate Size
-    // const validSize = ['small', 'medium', 'large'];
-    // if(!validSize.includes(data.size)) {
-    //     errors.push("Size must be small, medium, or large");
-    // }
+    if(!data.lname || data.lname.trim() === "") {
+        errors.push("Last name is required");
+    }
+
+
+    //validate Size
+    const validMeet = ['inperson', 'online', 'other-option'];
+    if(!validMeet.includes(data.meet)) {
+        errors.push("Select must be in-person, online, or other");
+    }
+
+    // Validate mailing list
+    const validMethods = ['html', 'text'];
+
+    if (data.mailList === 'main-list') {
+        if (!validMethods.includes(data.method)) {
+            errors.push("Please select an email format");
+        }
+    }
 
     //return result
     console.log(errors);
