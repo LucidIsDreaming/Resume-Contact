@@ -23,7 +23,7 @@ export function validateForm(data) {
     // Validate mailing list
     const validMethods = ['html', 'text'];
 
-    if (data.mailList === 'main-list') {
+    if (data.mailList === 'mail-list') {
         if (!validMethods.includes(data.method)) {
             errors.push("Please select an email format");
         }
